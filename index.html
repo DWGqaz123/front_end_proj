@@ -3,294 +3,263 @@
 <html lang="en">
 
 <head>
+    <!-- Basic-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Recommendation Interface</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="JS.js"></script>
+
+    <!-- Theme style-->
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/index.js"></script>
+
+    <!-- Font theme-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap">
 </head>
 
 <body>
-
-    <header>
-        <div class="search-container">
-            <input type="search" placeholder="Search Music...">
-        </div>
-    </header>
-
-    <nav>
+    <!-- HEADER -->
+    <nav id="top">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Genres</a></li>
-            <li><a href="#">Playlists</a></li>
-            <li><a href="#">New Releases</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./genres.html">Genres</a></li>
+            <li><a href="./players.html">Players</a></li>
+            <li><a href="./rank.html">Rank</a></li>
         </ul>
     </nav>
+    <!-- END HEADER  -->
 
-    <main>
-        <section class="recommendations" id="padel_1">
-            <header>
-                <div class="search-container">
-                    <input type="search" placeholder="Search Music...">
-                </div>
-            </header>
-        
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Genres</a></li>
-                    <li><a href="#">Playlists</a></li>
-                    <li><a href="#">New Releases</a></li>
-                </ul>
-            </nav>
-            <h2 class="panel_title">First genre &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recommended for You</h2>
-            <span class="line_first"></span>
-            <div class="card-container">
-                <!-- Repeat this block for multiple cards -->
-                <div class="card">
-                    <img src="asset/image/Old_Town_Road_cover.jpg" alt="Old_Town_Road" class="card-image"
-                        onclick="showDetail(event)">
-                    <h3>Old Town Road</h3>
-                    <h5>Lil Nas X</h5>
-                    <p>"Old Town Road" is the debut mainstream single by American rapper Lil Nas X, first released
-                        independently in December 2018</p>
-                </div>
+    <!-- PAGE CONTEN 1 -->
+    <div class="container image-bg" id="imageContainer">
+        <div class="content .t10l10">
+            <h1 class="text_title">Welcome to the Music Paradise</h1>
+            <p class="text_words">
+                Discover a world where music comes alive <br><br>
+                An oasis for music enthusiasts and seekers of sonic bliss. <br><br>
+                We bring you a curated experience that transcends boundaries and genres.
+            </p>
+        </div>
 
-                <div class="card">
-                    <img src="asset/image/Baby_cover.jpeg" alt="Baby" class="card-image" onclick="showDetail(event)">
-                    <h3>Baby</h3>
-                    <h5>Justin Bieber</h5>
-                    <p>"Baby" is a song by Canadian singer Justin Bieber featuring American rapper Ludacris. It was
-                        released as the lead single on Bieber's debut studio album, My World 2.0. The track was written
-                        by the artists alongside Christina Milian and producers Tricky Stewart and The-Dream.</p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/Stan_cover.jpeg" alt="Stan" class="card-image" onclick="showDetail(event)">
-                    <h3>Stan</h3>
-                    <h5>Eminem</h5>
-                    <p>"The song is based on the correspondence between Stan and Eminem, with the first three verses
-                        being letters from Stan to Eminem and the last verse being letters from Eminem to Stan. The song
-                        includes Dido's melancholic female vocals and Eminem's heavily nasal rapping.</p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/images.jpeg" alt="Bad Guy" class="card-image" onclick="showDetail(event)">
-                    <h3>Bad Guy</h3>
-                    <h5>Billie Eilish</h5>
-                    <p>"Bad Guy" is a song by the American singer-songwriter Billie Eilish and the fifth single from her
-                        first studio album 2019</p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/Rolling_in_the_Deep_cover.png" alt="Rolling In the Deep" class="card-image"
-                        onclick="showDetail(event)">
-                    <h3>Rolling In the Deep</h3>
-                    <h5>Adele</h5>
-                    <p>"Rolling in the Deep" is a song by English singer-songwriter Adele from her second studio album,
-                        21 (2011). It is the lead single and opening track on the album. The song was written by Adele
-                        and Paul Epworth. </p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/Everybody Dies In Their Nightmares_cover.jpeg"
-                        alt="Everybody Dies In Their Nightmares" class="card-image" onclick="showDetail(event)">
-                    <h3>Everybody Dies In Their Nightmares</h3>
-                    <h5>XXXTENTACION</h5>
-                    <p>"Everybody Dies in Their Nightmares" is a song by American rapper XXXTentacion from his debut
-                        studio album 17 (2017). It was produced by Potsu.</p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/see_youn_down_cover.webp" alt="See You Down" class="card-image"
-                        onclick="showDetail(event)">
-                    <h3>See You Down</h3>
-                    <h5>Queen Omega & Lions Flow</h5>
-                    <p>With vibrant music, Queen Omega invites us to have a positive attitude no matter what and to stay
-                        awake to avoid being dragged down further. She sings for all the people who may feel down to
-                        keep shining in the dark, to continue smiling and fighting.</p>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="recommendations" id="padel_2">
-            <hr size="8" color="black">   <!-- 用于手动保持标题高度 -->
-            <h2 class="panel_title">Second genre</h2>
-            <span class="line"></span>
-            <div class="card-container">
-                <!-- Repeat this block for multiple cards -->
-                <div class="card">
-                    <img src="asset/image/Old_Town_Road_cover.jpg" alt="Old_Town_Road" class="card-image"
-                        onclick="showDetail(event)">
-                    <h3>Old Town Road</h3>
-                    <h5>Lil Nas X</h5>
-                    <p>"Old Town Road" is the debut mainstream single by American rapper Lil Nas X, first released
-                        independently in December 2018</p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/Baby_cover.jpeg" alt="Baby" class="card-image" onclick="showDetail(event)">
-                    <h3>Baby</h3>
-                    <h5>Justin Bieber</h5>
-                    <p>"Baby" is a song by Canadian singer Justin Bieber featuring American rapper Ludacris. It was
-                        released as the lead single on Bieber's debut studio album, My World 2.0. The track was written
-                        by the artists alongside Christina Milian and producers Tricky Stewart and The-Dream.</p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/Stan_cover.jpeg" alt="Stan" class="card-image" onclick="showDetail(event)">
-                    <h3>Stan</h3>
-                    <h5>Eminem</h5>
-                    <p>"The song is based on the correspondence between Stan and Eminem, with the first three verses
-                        being letters from Stan to Eminem and the last verse being letters from Eminem to Stan. The song
-                        includes Dido's melancholic female vocals and Eminem's heavily nasal rapping.</p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/images.jpeg" alt="Bad Guy" class="card-image" onclick="showDetail(event)">
-                    <h3>Bad Guy</h3>
-                    <h5>Billie Eilish</h5>
-                    <p>"Bad Guy" is a song by the American singer-songwriter Billie Eilish and the fifth single from her
-                        first studio album 2019</p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/Rolling_in_the_Deep_cover.png" alt="Rolling In the Deep" class="card-image"
-                        onclick="showDetail(event)">
-                    <h3>Rolling In the Deep</h3>
-                    <h5>Adele</h5>
-                    <p>"Rolling in the Deep" is a song by English singer-songwriter Adele from her second studio album,
-                        21 (2011). It is the lead single and opening track on the album. The song was written by Adele
-                        and Paul Epworth. </p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/Everybody Dies In Their Nightmares_cover.jpeg"
-                        alt="Everybody Dies In Their Nightmares" class="card-image" onclick="showDetail(event)">
-                    <h3>Everybody Dies In Their Nightmares</h3>
-                    <h5>XXXTENTACION</h5>
-                    <p>"Everybody Dies in Their Nightmares" is a song by American rapper XXXTentacion from his debut
-                        studio album 17 (2017). It was produced by Potsu.</p>
-                </div>
-
-                <div class="card">
-                    <img src="asset/image/see_youn_down_cover.webp" alt="See You Down" class="card-image"
-                        onclick="showDetail(event)">
-                    <h3>See You Down</h3>
-                    <h5>Queen Omega & Lions Flow</h5>
-                    <p>With vibrant music, Queen Omega invites us to have a positive attitude no matter what and to stay
-                        awake to avoid being dragged down further. She sings for all the people who may feel down to
-                        keep shining in the dark, to continue smiling and fighting.</p>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="recommendations" id="padel_3">
-            <hr size="10" color="black">
-            <h2 class="panel_title">Third genre</h2>
-            <span class="line"></span>
-        </section>
-
-        <section class="recommendations" id="padel_4">
-            <hr size="12" color="black">
-            <h2 class="panel_title">Fourth genre</h2>
-            <span class="line"></span>
-        </section>
+        <div class="arrow">
+            <text>Scroll Down</text>
+            <i class="fa-solid fa-chevron-down fa-flip fa-lg"></i>
+        </div>
 
 
-        <h2> Need More ...</h2>
-    </main>
+        <div class="afterImage">
 
+            <!-- let's enjoy the music -->
+            <svg class="text_enjoy" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+
+                <text x="10" y="35" class="small">Let's</text>
+                <text x="40" y="35" class="heavy">Enjoy</text>
+                <text x="45" y="55" class="small">the</text>
+                <text x="65" y="55" class="Rrrrr">Music!</text>
+            </svg>
+
+            <img src="asset/image/afterImage.png" alt="after">
+        </div>
+    </div>
+    <!-- END PAGE CONTEN 1-->
+
+    <!-- PAGE CONTEN 2 -->
+    <div class="container white-bg" id="page2">
+        <div class="slider left_top">
+
+            <img src="asset/image/About Damn Time_cover.jpeg" class="left_item item-1">
+            <img src="asset/image/Anti-Hero_cover.jpeg" class="left_item item-2">
+            <img src="asset/image/As It Was_cover.jpeg" class="left_item item-3">
+            <img src="asset/image/Bad Habit_cover.jpeg" class="left_item item-4">
+            <img src="asset/image/Boyfriend_cover.jpeg" class="left_item item-5">
+
+        </div>
+
+        <div class="slider right_bottom">
+
+            <img src="asset/image/危险派对_cover.jpeg" class="right_item item-1">
+            <img src="asset/image/绿洲_cover.jpeg" class="right_item item-2">
+            <img src="asset/image/烂醉_cover.jpeg" class="right_item item-3">
+            <img src="asset/image/燕尾服_cover.jpeg" class="right_item item-4">
+            <img src="asset/image/月_cover.jpeg" class="right_item item-5">
+
+        </div>
+
+        <div class="text-container left_bottom">
+
+            <p> TODO: <br><br><br>
+                1. Replace the img and corresponding lyrics <br><br><br>
+                2. Add animation to the img
+            </p>
+        </div>
+
+        <div class="text-container right_top">
+            <p> Turn up the music, turn down the lights <br><br><br>
+                I got a feelin' I'm gon' be alright<br><br><br>
+                Okay (Okay), alright<br><br><br>
+                It's about damn time (Time)<br><br><br>
+            </p>
+        </div>
+        <button id="backButton">Back to Top</button>
+    </div>
+    <!-- END PAGE CONTEN 2-->
+
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2023 Musicane. All rights reserved.</p>
     </footer>
-    <!--模态框显示歌曲详情-->
-    <div id="modal-container">
-        <div id="modal-content">
-            <span id="close-modal" onclick="closeModal()">&times;</span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-artist"></p>
-            <p id="modal-description"></p>
-        </div>
-    </div>
-
-    <!-- 导入GSAP -->
+    <!-- END FOOTER -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
-
-    <!-- panel 的滚动动画 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Flip.min.js"></script>
+    <script src="https://kit.fontawesome.com/20e1f64115.js" crossorigin="anonymous"></script>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        // 打字机效果
+        let words = gsap.utils.toArray(".text_words"),
+            tl = gsap.timeline({ delay: 0.5 }),
+            timePerCharacter = 0.015;
 
-        let panels = gsap.utils.toArray(".recommendations");
-        // we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
-        let tops = panels.map(panel => ScrollTrigger.create({ trigger: panel, start: "top top" }));
-
-        panels.forEach((panel, i) => {
-            ScrollTrigger.create({
-                trigger: panel,
-                start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
-                pin: true,
-                pinSpacing: false
-            });
+        words.forEach(el => {
+            tl.from(el, { text: "", duration: el.innerHTML.length * timePerCharacter, ease: "none" });
         });
 
-        ScrollTrigger.create({
-            snap: {
-                snapTo: (progress, self) => {
-                    let panelStarts = tops.map(st => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
-                        snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
-                    return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
-                },
-                duration: 0.5
-            }
-        });
 
-    </script>
+        //标题出现
 
-    <!-- genre标题的出现动画 -->
+        gsap.from(".text_title", {
+            duration: 0.7,
+            x: 500,
+            y: 500,
+            opacity: 0
+        })
 
-    <script>
-        let lines = gsap.utils.toArray(".line");
-        lines.forEach((line, i) => {
-            gsap.from(line, {
+
+        //滚轮图片变换
+
+        gsap.utils.toArray("#imageContainer").forEach(section => {
+            let tl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: line,
+                    trigger: section,
+                    start: "center center",
+                    // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
+                    end: () => "+=" + section.offsetWidth,
                     scrub: true,
-                    start: "top bottom",
-                    end: "top top"
+                    pin: true,
+                    anticipatePin: 1
                 },
-                scaleX: 0,
-                transformOrigin: "left center",
-                ease: "none"
+                defaults: { ease: "none" }
+            });
+            // animate the container one way...
+            tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0 }, { xPercent: 0 })
+                // ...and the image the opposite way (at the same time)
+                .fromTo(section.querySelector(".afterImage img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0)
+
+        });
+
+        // 叠加块动画实现
+
+        const slider_1 = document.querySelector(".slider.left_top");
+        const items_1 = gsap.utils.toArray(".left_item");
+        const offset_1 = 30;
+
+
+        function moveCard() {
+            const lastItem = slider_1.querySelector(".left_item:last-child");
+
+            if (slider_1 && lastItem) {
+                lastItem.style.display = "none"; // Hide the last item
+                const newItem = document.createElement("img");
+                newItem.className = lastItem.className; // Set the same class name
+                newItem.src = lastItem.src; // Copy the text content
+                slider_1.insertBefore(newItem, slider_1.firstChild); // Insert the new item at the beginning of the slider
+            }
+        }
+
+        slider_1.addEventListener("click", (e) => {
+            let state = Flip.getState(".left_item");
+
+            moveCard();
+
+            Flip.from(state, {
+                targets: ".left_item",
+                ease: "sine.inOut",
+                absolute: true,
+                onEnter: (elements) => {
+                    return gsap.from(elements, {
+                        yPercent: 20,
+                        opacity: 0,
+                        ease: "sine.out"
+                    });
+                },
+                onLeave: (element) => {
+                    return gsap.to(element, {
+                        yPercent: 20,
+                        xPercent: -20,
+                        transformOrigin: "bottom left",
+                        opacity: 0,
+                        ease: "sine.out",
+                        onComplete() {
+                            console.log("logging", element[0])
+                            slider_1.removeChild(element[0]);
+                        }
+                    });
+                }
             });
         });
-    </script>
-
-    <!-- panel 颜色变化 -->
 
 
-    <script>
-        ScrollTrigger.defaults({
-            toggleActions: "restart pause resume pause"
-        });
-        let ColorPanels = gsap.utils.toArray(".recommendations");
-        ColorPanels.forEach((ColorPanel, i) => {
-            gsap.to(ColorPanel, {
-                scrollTrigger: {
-                    trigger: ColorPanel,
-                    toggleActions: "play reverse play reset"
+
+        const slider_2 = document.querySelector(".slider.right_bottom");
+        const items_2 = gsap.utils.toArray(".right_item");
+        const offset_2 = 30;
+
+
+        function moveCard_2() {
+            const lastItem_2 = slider_2.querySelector(".right_item:last-child");
+
+            if (slider_2 && lastItem_2) {
+                lastItem_2.style.display = "none"; // Hide the last item
+                const newItem_2 = document.createElement("img");
+                newItem_2.className = lastItem_2.className; // Set the same class name
+                newItem_2.src = lastItem_2.src; // Copy the text content
+                slider_2.insertBefore(newItem_2, slider_2.firstChild); // Insert the new item at the beginning of the slider
+            }
+        }
+
+        slider_2.addEventListener("click", (e) => {
+            let state_2 = Flip.getState(".right_item");
+
+            moveCard_2();
+
+            Flip.from(state_2, {
+                targets: ".right_item",
+                ease: "sine.inOut",
+                absolute: true,
+                onEnter: (elements) => {
+                    return gsap.from(elements, {
+                        yPercent: 20,
+                        opacity: 0,
+                        ease: "sine.out"
+                    });
                 },
-                duration: 1,
-                backgroundColor:"#000000",
-                ease: "none"
+                onLeave: (element) => {
+                    return gsap.to(element, {
+                        yPercent: 20,
+                        xPercent: -20,
+                        transformOrigin: "bottom left",
+                        opacity: 0,
+                        ease: "sine.out",
+                        onComplete() {
+                            console.log("logging", element[0])
+                            slider_2.removeChild(element[0]);
+                        }
+                    });
+                }
             });
         });
-    </script>
 
+
+    </script>
 </body>
 
 </html>
