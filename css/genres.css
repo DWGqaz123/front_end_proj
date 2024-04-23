@@ -1,0 +1,280 @@
+html, body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+    width: 100%;
+    overflow-x:hidden;
+}
+
+header {
+    background: #1f1f1f;
+    padding: 10px;
+}
+
+.search-container input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    border: none;
+    color: white;
+}
+
+#topNav{
+    top: 0%;
+    z-index: 10;
+    width: 100%;
+    height: 55px;
+}
+
+#Logo {
+    height: 30px; 
+}
+#navLogo{
+    left: 20px;
+    position:absolute;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #222;
+    padding: 10px 0;
+    height: 35px;
+}
+
+nav ul li {
+    padding: 0 20px;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+main {
+    width: 100%;
+}
+
+.recommendations{
+    height: 900px;
+    background-color:#292c33;
+    width: 100%;
+    /* background-image: none; */
+}
+.recommendations h2 {
+    margin-bottom: 40px;
+}
+
+.panel_title{
+    color: rgb(241, 244, 242);
+    margin-left: 20px;
+    
+}
+
+.hrLine {
+    color: #292c33;
+    border: #292c33;
+}
+
+.line, .line_first {
+    width: 100%;
+    height: 8px;
+    position: relative;
+    display: inline-block;
+    background-color: white;
+  }
+.card-container {
+    display: flex;
+    overflow-x: auto; /* 启用水平滚动 */
+    gap: 20px; /* 卡片之间的间距 */
+    padding: 20px; /* 容器内侧距 */
+}
+
+.card {
+    flex: 0 0 auto; /* 卡片不伸缩，保持原始宽度 */
+    background: rgb(204 211 226 / 8%); /* rgb(204 211 226 / 8%); */
+    width: 250px; /* 根据需要调整卡片的宽度 */
+    /* border-radius: 10px; */
+    margin-right: 10px; /* 卡片之间的右侧间距 */
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box; /* 设置盒子模型为border-box，使边框不影响元素的尺寸 */
+    border: 2px solid transparent; /* 初始时设置透明边框 */
+}
+
+.playIcon{
+    position: absolute;
+    top: 191px;
+    z-index: 10;
+    color: #fff;
+    border: solid,#fff;
+    
+}
+
+.playIcon img {
+    width: 60px;
+    height: auto;
+    color: (204 211 226 / 8%);
+    opacity: 0; /* 初始状态完全透明 */
+    visibility: hidden; /* 初始状态不可见 */
+    left: -30px; /* 初始状态在卡片左侧外部 */
+    position: absolute;
+
+/* 
+    transform: translateY(-50%); */
+}
+
+h3,h5 {
+    margin: 15px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100px;
+    background: #333;
+    margin-bottom: 10px;
+}
+
+.card-image {
+    width: 100%; /* Ensures the image is as wide as the card */
+    height: 250px; /* Fixes the height of the image */
+    /* border-radius: 10px;  */
+    object-fit: cover; /* Covers the area without stretching the image, cropping if necessary */
+}
+
+.card:hover {
+    border: 2px solid rgb(241, 241, 245); /* 更改卡片边框样式 */
+    box-shadow: 0 0 10px rgba(248, 247, 247, 0.5); /* 添加阴影效果 */
+    filter: brightness(110%);
+}
+
+footer {
+    background: #1f1f1f;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+}
+
+.card p {
+    display: none;
+}
+/* 模态框样式 */
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  #modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:rgba(46, 34, 34, 0.87);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+  }
+
+  #modal-title {
+    font-weight: 200;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+  }
+
+  #modal-artist{
+    text-align: center;
+  }
+  
+  #modal-description {
+    text-align: center;
+  }
+
+/*按钮设置*/
+
+.btn {
+    --color: #96f2d8;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 12px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+   }
+   
+   .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: var(--color2);
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+
+   /* END 按钮设置*/
+
+.backButton {
+    
+}
+
